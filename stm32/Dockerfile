@@ -1,7 +1,7 @@
-FROM ubuntu:18.04
+FROM zpex/ubuntu-x11
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y \
-    libmodern-perl-perl libxml-libxml-perl curl build-essential unzip libc6-i386 openjdk-8-jre
+    libmodern-perl-perl libxml-libxml-perl curl build-essential unzip libc6-i386 openjdk-8-jre minicom
 
 RUN perl -MCPAN -e 'install String::LCSS'
 
